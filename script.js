@@ -95,19 +95,19 @@ function togglePortfolioVideo() {
   if (!portfolioVideo) return;
   if (portfolioVideo.paused) {
     portfolioVideo.play();
-    playIcon.classList.add('hidden');
-    pauseIcon.classList.remove('hidden');
-    portfolioPlayBtn.style.opacity = '0';
-    portfolioPlayBtn.style.transition = 'opacity 0.5s';
+    if (playIcon) playIcon.classList.add('hidden');
+    if (pauseIcon) pauseIcon.classList.remove('hidden');
+    if (portfolioPlayBtn) portfolioPlayBtn.style.opacity = '0';
   } else {
     portfolioVideo.pause();
-    playIcon.classList.remove('hidden');
-    pauseIcon.classList.add('hidden');
-    portfolioPlayBtn.style.opacity = '1';
+    if (playIcon) playIcon.classList.remove('hidden');
+    if (pauseIcon) pauseIcon.classList.add('hidden');
+    if (portfolioPlayBtn) portfolioPlayBtn.style.opacity = '1';
   }
 }
 
 if (portfolioPlayBtn) {
+  portfolioPlayBtn.addEventListener('click', togglePortfolioVideo);
   const videoWrap = portfolioPlayBtn.closest('.portfolio-video-inner');
   if (videoWrap) {
     videoWrap.addEventListener('mouseenter', function () {
@@ -130,16 +130,31 @@ document.getElementById('nav-logo-link').addEventListener('click', function (e) 
 /* ---------- Force autoplay when portfolio video becomes visible ---------- */
 
 if (portfolioVideo) {
+  // Ensure video is muted for autoplay on mobile
+  portfolioVideo.muted = true;
+  
+  // Try to play immediately on page load
+  const playPromise = portfolioVideo.play();
+  if (playPromise !== undefined) {
+    playPromise.catch(() => {
+      // Autoplay was prevented, will be handled by intersection observer
+    });
+  }
 
+  // Force autoplay when video becomes visible in viewport
   const videoObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         portfolioVideo.muted = true;
-        portfolioVideo.play().catch(() => {});
+        const playPromise = portfolioVideo.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {
+            // Fallback: if autoplay fails, user can click play button
+          });
+        }
       }
     });
-  }, { threshold: 0.3 });
+  }, { threshold: 0.1 });
 
   videoObserver.observe(portfolioVideo);
-
 }
