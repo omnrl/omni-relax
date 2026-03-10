@@ -463,53 +463,65 @@
           <div class="contact-divider-h"></div>
         </div>
         <div class="contact-form-col" data-animate data-delay="100">
-          <form id="contact-form" class="contact-form" onsubmit="handleFormSubmit(event)">
-            <div class="form-row-2">
-              <div class="form-group">
-                <label class="form-label">Nome</label>
-                <input type="text" required placeholder="O seu nome" class="form-input" />
-              </div>
-              <div class="form-group">
-                <label class="form-label">Empresa</label>
-                <input type="text" placeholder="A sua empresa" class="form-input" />
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Email</label>
-              <input type="email" required placeholder="o.seu@email.com" class="form-input" />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Tipo de Espaco</label>
-              <select class="form-select">
-                <option value="" disabled selected>Selecione o tipo de espaco</option>
-                <option value="shopping">Centro Comercial</option>
-                <option value="airport">Aeroporto</option>
-                <option value="hotel">Hotel</option>
-                <option value="hospital">Hospital / Clinica</option>
-                <option value="office">Edificio de Escritorios</option>
-                <option value="gym">Ginasio / Spa</option>
-                <option value="other">Outro</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Mensagem</label>
-              <textarea placeholder="Fale-nos sobre o seu espaco e como podemos ajudar..." class="form-textarea" rows="4"></textarea>
-            </div>
-            <button type="submit" id="submit-btn" class="btn-submit">
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m22 2-7 20-4-9-9-4Z"></path>
-                <path d="M22 2 11 13"></path>
-              </svg>
-              Enviar Pedido
-            </button>
-            <div id="form-success" class="form-success hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-gold">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <path d="m9 11 3 3L22 4"></path>
-              </svg>
-              <p>Mensagem enviada com sucesso! Entraremos em contacto brevemente.</p>
-            </div>
-          </form>
+        <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+  <input type="hidden" name="access_key" value="65096788-5fec-4060-a50b-910ca5144568">
+  <input type="hidden" name="subject" value="Novo pedido de contacto — Omni Relax">
+  <input type="checkbox" name="botcheck" style="display:none;">
+
+  <div class="form-row-2">
+    <div class="form-group">
+      <label class="form-label">Nome</label>
+      <input type="text" name="name" required placeholder="O seu nome" class="form-input" />
+    </div>
+
+    <div class="form-group">
+      <label class="form-label">Empresa</label>
+      <input type="text" name="company" placeholder="A sua empresa" class="form-input" />
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Email</label>
+    <input type="email" name="email" required placeholder="o.seu@email.com" class="form-input" />
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Tipo de Espaço</label>
+    <select name="space_type" class="form-select">
+      <option value="" disabled selected>Selecione o tipo de espaço</option>
+      <option value="shopping">Centro Comercial</option>
+      <option value="airport">Aeroporto</option>
+      <option value="hotel">Hotel</option>
+      <option value="hospital">Hospital / Clínica</option>
+      <option value="office">Edifício de Escritórios</option>
+      <option value="gym">Ginásio / Spa</option>
+      <option value="other">Outro</option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label class="form-label">Mensagem</label>
+    <textarea name="message" placeholder="Fale-nos sobre o seu espaço e como podemos ajudar..." class="form-textarea" rows="4"></textarea>
+  </div>
+
+  <button type="submit" id="submit-btn" class="btn-submit">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m22 2-7 20-4-9-9-4Z"></path>
+      <path d="M22 2 11 13"></path>
+    </svg>
+    Enviar Pedido
+  </button>
+
+  <div id="form-success" class="form-success hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-gold">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <path d="m9 11 3 3L22 4"></path>
+    </svg>
+    <p>Mensagem enviada com sucesso! Entraremos em contacto brevemente.</p>
+  </div>
+
+</form>
         </div>
       </div>
     </div>
