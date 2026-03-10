@@ -128,8 +128,19 @@ document.getElementById('nav-logo-link').addEventListener('click', function (e) 
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  const v = document.getElementById("portfolio-video");
-  if (v) {
-    v.play().catch(() => {});
-  }
+
+  const video = document.getElementById("portfolio-video");
+  if (!video) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        video.muted = true;
+        video.play().catch(() => {});
+      }
+    });
+  }, { threshold: 0.5 });
+
+  observer.observe(video);
+
 });
