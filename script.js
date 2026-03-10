@@ -126,3 +126,10 @@ document.getElementById('nav-logo-link').addEventListener('click', function (e) 
   e.preventDefault();
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const v = document.getElementById("portfolio-video");
+  if (v) {
+    v.play().catch(() => {});
+  }
+});
