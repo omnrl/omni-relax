@@ -127,20 +127,19 @@ document.getElementById('nav-logo-link').addEventListener('click', function (e) 
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
+/* ---------- Force autoplay when portfolio video becomes visible ---------- */
 
-  const video = document.getElementById("portfolio-video");
-  if (!video) return;
+if (portfolioVideo) {
 
-  const observer = new IntersectionObserver((entries) => {
+  const videoObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        video.muted = true;
-        video.play().catch(() => {});
+        portfolioVideo.muted = true;
+        portfolioVideo.play().catch(() => {});
       }
     });
-  }, { threshold: 0.5 });
+  }, { threshold: 0.3 });
 
-  observer.observe(video);
+  videoObserver.observe(portfolioVideo);
 
-});
+}
