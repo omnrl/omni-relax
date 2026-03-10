@@ -204,6 +204,7 @@ a { text-decoration: none; color: inherit; }
   background: var(--color-gold);
   width: 5rem;
   margin: 0 auto 2rem;
+  animation: expandWidth 0.8s ease forwards;
 }
 .hero-eyebrow {
   font-family: var(--font-body);
@@ -212,6 +213,12 @@ a { text-decoration: none; color: inherit; }
   text-transform: uppercase;
   color: var(--color-gold-light);
   margin-bottom: 1.5rem;
+  
+  text-shadow:
+    0 4px 12px rgba(0,0,0,0.75),
+    0 10px 30px rgba(0,0,0,0.65),
+    0 0 10px rgba(0,0,0,0.35);
+  
   opacity: 0;
   transform: translateY(20px);
   animation: fadeUp 0.8s ease forwards 0.1s;
@@ -359,8 +366,20 @@ a { text-decoration: none; color: inherit; }
 .text-gold-light { color: var(--color-gold-light); }
 .text-espresso { color: var(--color-espresso); font-weight: 700; }
 
-.gold-line { width: 4rem; height: 1px; background: var(--color-gold); margin-bottom: 2rem; }
-.gold-line-center { width: 4rem; height: 1px; background: var(--color-gold); margin: 0 auto 1.5rem; }
+.gold-line { 
+  width: 4rem; 
+  height: 1px; 
+  background: var(--color-gold); 
+  margin-bottom: 2rem;
+  animation: expandWidth 0.8s ease forwards;
+}
+.gold-line-center { 
+  width: 4rem; 
+  height: 1px; 
+  background: var(--color-gold); 
+  margin: 0 auto 1.5rem;
+  animation: expandWidthCenter 0.8s ease forwards;
+}
 
 .section-subtext-white {
   font-family: var(--font-body);
@@ -830,6 +849,14 @@ a { text-decoration: none; color: inherit; }
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50%       { transform: translateY(8px); }
+}
+@keyframes expandWidth {
+  from { width: 0; }
+  to   { width: 4rem; }
+}
+@keyframes expandWidthCenter {
+  from { width: 0; }
+  to   { width: 4rem; }
 }
 
 /* ============================================================
