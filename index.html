@@ -301,15 +301,18 @@
             <div class="portfolio-video-inner">
               <video
   id="portfolio-video"
-  src="assets/portfolio-video.mp4"
   autoplay
   muted
   loop
   playsinline
   webkit-playsinline
   preload="auto"
+  disablepictureinpicture
+  controlslist="nodownload noplaybackrate"
   class="portfolio-video"
-></video>
+>
+  <source src="assets/portfolio-video-noaudio.mp4" type="video/mp4">
+</video>
             </div>
           </div>
         </div>
