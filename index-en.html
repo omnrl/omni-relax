@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omni Relax</title>
+  <meta name="description" content="Premium self-service massage chair solutions for commercial spaces in Portugal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ======= NAVBAR ======= -->
+  <nav id="navbar" class="navbar">
+    <div class="container nav-inner">
+      <a href="#" id="nav-logo-link" class="nav-logo-link">
+        <span class="nav-logo-text">Omni Relax</span>
+      </a>
+      <ul class="nav-links">
+        <li><button class="nav-link" onclick="scrollToSection('sobre')">About Us<span class="nav-underline"></span></button></li>
+        <li><button class="nav-link" onclick="scrollToSection('solucao')">Solution<span class="nav-underline"></span></button></li>
+        <li><button class="nav-link" onclick="scrollToSection('produto')">Product<span class="nav-underline"></span></button></li>
+        <li><button class="nav-link" onclick="scrollToSection('portfolio')">Portfolio<span class="nav-underline"></span></button></li>
+        <li><button class="nav-link" onclick="scrollToSection('historia')">Our Story<span class="nav-underline"></span></button></li>
+        <li><button class="nav-link" onclick="scrollToSection('contacto')">Contact<span class="nav-underline"></span></button></li>
+      </ul>
+      <button class="btn-fale-connosco" onclick="scrollToSection('contacto')">Talk to Us</button>
+      <a href="index.html" class="lang-toggle" aria-label="Mudar para Português">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+        PT
+      </a>
+      <button id="nav-hamburger" class="nav-hamburger" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="4" x2="20" y1="6" y2="6"></line>
+          <line x1="4" x2="20" y1="12" y2="12"></line>
+          <line x1="4" x2="20" y1="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div id="nav-mobile-menu" class="nav-mobile-menu">
+      <button class="nav-mobile-link" onclick="scrollToSection('sobre'); closeMobileMenu()">About Us</button>
+      <button class="nav-mobile-link" onclick="scrollToSection('solucao'); closeMobileMenu()">Solution</button>
+      <button class="nav-mobile-link" onclick="scrollToSection('produto'); closeMobileMenu()">Product</button>
+      <button class="nav-mobile-link" onclick="scrollToSection('portfolio'); closeMobileMenu()">Portfolio</button>
+      <button class="nav-mobile-link" onclick="scrollToSection('historia'); closeMobileMenu()">Our Story</button>
+      <button class="nav-mobile-link" onclick="scrollToSection('contacto'); closeMobileMenu()">Contact</button>
+      <button class="nav-mobile-cta" onclick="scrollToSection('contacto'); closeMobileMenu()">Talk to Us</button>
+      <a href="index.html" class="nav-mobile-lang" aria-label="Mudar para Português">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+        PT — Português
+      </a>
+    </div>
+  </nav>
+
+  <!-- ======= HERO SECTION ======= -->
+  <section class="hero-section">
+    <div class="hero-bg-wrapper">
+      <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663400111803/bjDxwhZx4aCbp3sxPH5ftW/hero-bg-8KassGih3BdHatsM5FesmG.webp" alt="" class="hero-bg-img" />
+      <div class="hero-bg-overlay"></div>
+    </div>
+    <div class="container hero-content">
+      <div class="hero-gold-line"></div>
+      <p class="hero-eyebrow">Premium Vending Massage Solutions</p>
+      <h1 class="hero-title">
+        Enhancing Spaces with
+        <span class="hero-title-italic block">Relaxation & Profitability</span>
+      </h1>
+      <p class="hero-subtitle">
+        We install and manage premium self-service massage chairs in commercial
+        spaces — transforming unused areas into revenue centers and improving
+        the customer experience.
+      </p>
+      <div class="hero-buttons">
+        <button class="btn-primary" onclick="scrollToSection('solucao')">Discover Our Solution</button>
+        <button class="btn-outline-gold" onclick="scrollToSection('contacto')">Partner With Us</button>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="hero-scroll-bounce">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="chevron-down-gold">
+          <path d="m6 9 6 6 6-6"></path>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= ABOUT SECTION ======= -->
+  <section id="sobre" class="section-light-1">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-col" data-animate data-delay="0">
+          <div class="about-img-wrapper">
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663400111803/bjDxwhZx4aCbp3sxPH5ftW/about-section-VzkmjaeWp37RFC3FRAuZrM.webp" alt="Premium leather and gold craftsmanship" class="about-img" />
+            <div class="about-img-border"></div>
+          </div>
+          <div class="about-img-deco"></div>
+        </div>
+        <div class="about-text-col" data-animate data-delay="100">
+          <p class="eyebrow-dark">About Us</p>
+          <h2 class="section-heading-dark">
+            Bringing Comfort to
+            <span class="text-wine block">Commercial Spaces</span>
+          </h2>
+          <div class="gold-line"></div>
+          <div class="about-paragraphs">
+            <p class="body-text"><strong class="text-espresso">Omni Relax Lda</strong> is a Lisbon-based company specializing in premium self-service massage chair solutions for commercial environments. We partner with shopping centers, airports, hotels, offices, clinics, gyms, beauty salons, and other high-traffic spaces to offer their customers an exceptional relaxation experience.</p>
+            <p class="body-text">Our turnkey service covers everything — from equipment supply and installation to ongoing maintenance. We handle the entire operation so our partners can focus on what they do best, benefiting from a new amenity that increases customer satisfaction.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= SOLUTION SECTION ======= -->
+  <section id="solucao" class="section-wine">
+    <div class="solution-bg-gradient"></div>
+    <div class="solution-bg-pattern"></div>
+    <div class="solution-content container">
+      <div class="section-header text-center" data-animate data-delay="0">
+        <p class="eyebrow-gold">Our Solution</p>
+        <h2 class="section-heading-white">
+          A Complete
+          <span class="text-gold-light italic">Turnkey Partnership</span>
+        </h2>
+        <div class="gold-line-center"></div>
+        <p class="section-subtext-white">We provide everything needed to bring premium massage services to your space — no investment, no hassle, just results.</p>
+      </div>
+      <div class="solution-grid">
+        <div class="solution-card" data-delay="0">
+          <div class="solution-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-gold">
+              <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path>
+              <path d="M20 3v4"></path><path d="M22 5h-4"></path>
+              <path d="M4 17v2"></path><path d="M5 18H3"></path>
+            </svg>
+          </div>
+          <h3 class="solution-card-title">Premium Equipment</h3>
+          <p class="solution-card-text">State-of-the-art Borealis massage chairs with full-body zero gravity massage, built for commercial durability and maximum user comfort.</p>
+        </div>
+        <div class="solution-card" data-delay="100">
+          <div class="solution-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-gold">
+              <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+              <line x1="2" x2="22" y1="10" y2="10"></line>
+            </svg>
+          </div>
+          <h3 class="solution-card-title">Digital Payment</h3>
+          <p class="solution-card-text">Simple and secure digital payments through Nayax terminals, world leaders in self-service payment solutions.</p>
+        </div>
+        <div class="solution-card" data-delay="200">
+          <div class="solution-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-gold">
+              <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+            </svg>
+          </div>
+          <h3 class="solution-card-title">Total Maintenance</h3>
+          <p class="solution-card-text">We handle all service, repairs, and maintenance. Your team never needs to worry about the equipment — we keep everything running perfectly.</p>
+        </div>
+        <div class="solution-card" data-delay="0">
+          <div class="solution-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-gold">
+              <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+              <polyline points="16 7 22 7 22 13"></polyline>
+            </svg>
+          </div>
+          <h3 class="solution-card-title">Revenue Generation</h3>
+          <p class="solution-card-text">Transform underutilized areas into revenue centers. Our chairs generate passive income and improve the customer experience in your space.</p>
+        </div>
+        <div class="solution-card" data-delay="100">
+          <div class="solution-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-gold">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+          </div>
+          <h3 class="solution-card-title">Zero Risk</h3>
+          <p class="solution-card-text">No initial investment from our partners. We supply, install, and manage everything at our own expense.</p>
+        </div>
+        <div class="solution-card" data-delay="200">
+          <div class="solution-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-gold">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+              <circle cx="9" cy="7" r="4"></circle>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+          </div>
+          <h3 class="solution-card-title">Enhanced Experience</h3>
+          <p class="solution-card-text">Offer your customers a premium amenity that increases dwell time, improves satisfaction, and differentiates your space from the competition.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= PRODUCT SECTION ======= -->
+  <section id="produto" class="section-light-2">
+    <div class="container">
+      <div class="section-header text-center" data-animate data-delay="0">
+        <p class="eyebrow-dark">Our Product</p>
+        <h2 class="section-heading-dark">
+          Explore the Chair
+          <span class="text-wine italic"> in 3D</span>
+        </h2>
+        <div class="gold-line-center"></div>
+        <p class="section-subtext-dark">Explore our Borealis massage chair interactively. Rotate, zoom, and examine every detail of the equipment we install.</p>
+      </div>
+      <div class="product-viewer-wrap" data-animate data-delay="200">
+        <div id="viewer-3d" class="product-viewer-box">
+          <div class="viewer-aspect">
+            <iframe
+              title="Borealis Massage Chair — 3D Model"
+              src="https://sketchfab.com/models/494e1ce4764740da8637618a643b3bf5/embed?autostart=1&internal=1&tracking=0&ui_ar=0&ui_infos=0&ui_snapshots=1&ui_stop=0&ui_theatre=1&ui_watermark=0"
+              class="viewer-iframe"
+              allow="autoplay; fullscreen; xr-spatial-tracking"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="corner corner-tl"></div>
+          <div class="corner corner-tr"></div>
+          <div class="corner corner-bl"></div>
+          <div class="corner corner-br"></div>
+        </div>
+        <div id="viewer-video" class="product-viewer-box hidden">
+          <div class="viewer-aspect bg-dark">
+            <video
+              id="product-video"
+              src="assets/chair-360.mp4"
+              playsinline
+              loop
+              controls
+              class="viewer-video"
+            ></video>
+          </div>
+          <div class="corner corner-tl"></div>
+          <div class="corner corner-tr"></div>
+          <div class="corner corner-bl"></div>
+          <div class="corner corner-br"></div>
+        </div>
+        <p class="viewer-hint">
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" x2="14" y1="3" y2="10"></line>
+            <line x1="3" x2="10" y1="21" y2="14"></line>
+          </svg>
+          Click and drag to rotate · Scroll to zoom
+        </p>
+      </div>
+      <div class="specs-wrap" data-animate data-delay="300">
+        <h3 class="specs-title">Chair Specifications</h3>
+        <div class="specs-grid">
+          <div class="spec-item">
+            <p class="spec-label">Brand</p>
+            <p class="spec-value">Borealis</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-label">Type</p>
+            <p class="spec-value">Full Body Zero Gravity</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-label">Massage Modes</p>
+            <p class="spec-value">Shiatsu, Kneading, Tapping, Rolling</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-label">Payment</p>
+            <p class="spec-value">Contactless / Digital</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-label">Upholstery</p>
+            <p class="spec-value">Premium Synthetic Leather</p>
+          </div>
+          <div class="spec-item">
+            <p class="spec-label">Colors</p>
+            <p class="spec-value">Wine &amp; Gold</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= PORTFOLIO SECTION ======= -->
+  
+  <!-- ======= PORTFOLIO SECTION ======= -->
+  <section id="portfolio" class="section-light-1">
+    <div class="container">
+
+      <p class="eyebrow-dark">Our Portfolio</p>
+
+      <h2 class="section-heading-dark">
+        Omni Relax at
+        <span class="text-wine block">Oeiras Parque</span>
+      </h2>
+
+      <div class="gold-line"></div>
+
+      <div class="portfolio-grid">
+
+        <div class="portfolio-video-col" data-animate data-delay="100">
+          <div class="portfolio-video-wrap">
+            <div class="portfolio-video-inner">
+              <video
+                id="portfolio-video"
+                src="assets/portfolio-video.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                class="portfolio-video"
+              ></video>
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-text-col" data-animate data-delay="0">
+          <div class="portfolio-paragraphs">
+            <p class="body-text">We currently have an operational space at Oeiras Parque, one of the most popular shopping centers in Greater Lisbon.</p>
+
+            <p class="body-text">We started the operation with two Borealis massage chairs and, due to the consistent increase in demand, we recently added two more units.</p>
+
+            <p class="body-text">The area is kept clean, organized, and visually appealing to customers, with circular vinyl mats that help define the space, Nayax digital payment terminals integrated into each chair, and a digital display with relaxing images that contribute to creating an inviting atmosphere.</p>
+
+            <p class="body-text">In the first months of operation, we have observed rapid growth in usage and customer loyalty. Currently, about 40% of revenue already comes from recurring users, indicating a high level of satisfaction and consistent potential for continuous use.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<!-- ======= OUR STORY SECTION ======= -->
+<section id="historia" class="section-light-1">
+  <div class="container">
+
+    <p class="eyebrow-dark">Our Story</p>
+
+    <h2 class="section-heading-dark">
+      How Omni Relax
+      <span class="text-wine block">Was Born</span>
+    </h2>
+
+    <div class="gold-line"></div>
+
+    <div class="portfolio-grid">
+
+      <div class="portfolio-video-col" data-animate data-delay="100">
+        <div class="portfolio-video-wrap">
+          <div class="portfolio-video-inner">
+            <img
+              src="assets/our-story.jpg"
+              alt="Natália and Gadi Spero"
+              class="portfolio-video"
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-text-col" data-animate data-delay="0">
+        <div class="portfolio-paragraphs">
+
+          <p class="body-text">
+            We are Natália and Gadi Spero, and for us this project is a true passion — that rare combination of business and pleasure, which generates profitability while doing good for people.
+          </p>
+
+          <p class="body-text">
+            It all started when we tried massage chairs for the first time, quite by chance, in a mall near our home. We were both delighted by the experience —  "That was the best euro I've ever spent!" It was just that relaxing and invigorating.  
+          </p>
+
+          <p class="body-text">
+            We ended up going back to that mall many times specifically to enjoy those chairs. At the same time, we started to imagine how the experience could be even better.
+          </p>
+
+          <p class="body-text">
+            From that idea Omni Relax was born — a project dedicated to creating elegant, clean, and inviting relaxation spaces, designed to provide real moments of rest.
+          </p>
+
+          <p class="body-text">
+            Our goal is simple: to offer deep relaxation and well-being to as many people as possible, while creating real value for the spaces hosting the experience.
+          </p>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- ======= CONTACT SECTION ======= -->
+  <section id="contacto" class="section-contact">
+    <div class="contact-bg-wrapper">
+      <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663400111803/bjDxwhZx4aCbp3sxPH5ftW/contact-bg-QynThDbXSNoGEvSyHJ6nhs.webp" alt="" class="contact-bg-img" />
+      <div class="contact-bg-overlay"></div>
+    </div>
+    <div class="contact-content container">
+      <div class="contact-header text-center" data-animate data-delay="0">
+        <p class="eyebrow-gold">Contact Us</p>
+        <h2 class="section-heading-white">
+          Let's Start a 
+          <span class="text-gold-light italic">Conversation</span>
+        </h2>
+        <div class="gold-line-center"></div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info-col" data-animate data-delay="0">
+          <h3 class="contact-company-name">Omni Relax Lda</h3>
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="contact-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-gold">
+                  <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"></path>
+                  <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"></path>
+                  <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"></path>
+                  <path d="M10 6h4"></path><path d="M10 10h4"></path>
+                  <path d="M10 14h4"></path><path d="M10 18h4"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="contact-info-label">Company</p>
+                <p class="contact-info-value">Omni Relax Lda</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-gold">
+                  <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </div>
+              <div>
+                <p class="contact-info-label">Address</p>
+                <p class="contact-info-value contact-address">
+                  Avenida do Atlântico, N.º 16<br>
+                  Office 2.01<br>
+                  1990-019 Parque das Nações<br>
+                  Lisbon, Portugal
+                </p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-gold">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.82a16 16 0 0 0 6.29 6.29l1.62-1.62a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="contact-info-label">Phone</p>
+                <p class="contact-info-value">+351 935 238 274</p>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-icon-box">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-gold">
+                  <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+              </div>
+              <div>
+                <p class="contact-info-label">Email</p>
+                <p class="contact-info-value">info@omnirelax.pt</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-divider-h"></div>
+        </div>
+        <div class="contact-form-col" data-animate data-delay="100">
+          <form id="contact-form" class="contact-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label">Name</label>
+                <input type="text" required placeholder="Your name" class="form-input" />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Company</label>
+                <input type="text" placeholder="Your company" class="form-input" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email</label>
+              <input type="email" required placeholder="your@email.com" class="form-input" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Space Type</label>
+              <select class="form-select">
+                <option value="" disabled selected>Select the space type</option>
+                <option value="shopping">Shopping Center</option>
+                <option value="airport">Airport</option>
+                <option value="hotel">Hotel</option>
+                <option value="hospital">Hospital / Clinic</option>
+                <option value="office">Office Building</option>
+                <option value="gym">Gym / Spa</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea placeholder="Tell us about your space and how we can help..." class="form-textarea" rows="4"></textarea>
+            </div>
+            <button type="submit" id="submit-btn" class="btn-submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m22 2-7 20-4-9-9-4Z"></path>
+                <path d="M22 2 11 13"></path>
+              </svg>
+              Send Request
+            </button>
+            <div id="form-success" class="form-success hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-gold">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <path d="m9 11 3 3L22 4"></path>
+              </svg>
+              <p>Message sent successfully! We will contact you shortly.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3 class="footer-brand">Omni Relax</h3>
+          <p class="footer-brand-desc">Premium self-service massage chair solutions for commercial spaces in Portugal.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Navigation</h4>
+          <ul class="footer-links">
+            <li><button class="footer-link" onclick="scrollToSection('sobre')">About Us</button></li>
+            <li><button class="footer-link" onclick="scrollToSection('solucao')">Solution</button></li>
+            <li><button class="footer-link" onclick="scrollToSection('produto')">Product</button></li>
+            <li><button class="footer-link" onclick="scrollToSection('portfolio')">Portfolio</button></li>
+            <li><button class="footer-link" onclick="scrollToSection('historia')">Our Story</button></li>
+            <li><button class="footer-link" onclick="scrollToSection('contacto')">Contact</button></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Headquarters</h4>
+          <address class="footer-address">
+            Omni Relax Lda<br>
+            Avenida do Atlântico, N.º 16<br>
+            Office 2.01<br>
+            1990-019 Parque das Nações<br>
+            Lisbon, Portugal
+          </address>
+        </div>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <p class="footer-copy">© 2026 Omni Relax Lda. All rights reserved.</p>
+        <p class="footer-location">Lisbon, Portugal</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
