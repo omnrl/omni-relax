@@ -948,3 +948,6 @@ a { text-decoration: none; color: inherit; }
   background: var(--color-gold);
   color: #fff;
 }
+
+/* White background section */
+.section-white { padding: 6rem 0; background: #ffffff; }
