@@ -325,8 +325,8 @@ a { text-decoration: none; color: inherit; }
 /* ============================================================
    SHARED SECTION STYLES
    ============================================================ */
-.section-light-1 { padding: 6rem 0; background: var(--color-cream); }
-.section-light-2 { padding: 6rem 0; background: var(--color-cream-2); }
+.section-light-1 { padding: 6rem 0; background: #ffffff; }
+.section-light-2 { padding: 6rem 0; background: var(--color-cream); }
 .section-wine { position: relative; padding: 6rem 0; overflow: hidden; }
 .section-contact { position: relative; padding: 6rem 0; overflow: hidden; }
 
