@@ -865,7 +865,7 @@ a { text-decoration: none; color: inherit; }
 
 /* alternate background to keep section rhythm */
 #historia {
-  background: var(--color-cream-2);
+  background: var(--color-cream);
 }
 
 /* remove the forced video layout */
