@@ -863,11 +863,6 @@ a { text-decoration: none; color: inherit; }
    OUR STORY SECTION ADJUSTMENTS
    ============================================================ */
 
-/* alternate background to keep section rhythm */
-#historia {
-  background: #ffffff;
-}
-
 /* remove the forced video layout */
 #historia .portfolio-video-inner {
   aspect-ratio: auto;
