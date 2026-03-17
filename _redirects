@@ -1,3 +1,0 @@
-# Redirect www.omnirelax.pt to omnirelax.pt
-https://www.omnirelax.pt/* https://omnirelax.pt/:splat 301!
-http://www.omnirelax.pt/* https://omnirelax.pt/:splat 301!
